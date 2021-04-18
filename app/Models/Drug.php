@@ -15,7 +15,10 @@ class Drug extends Model
     {
         return $this->belongsToMany('App\Models\Ingredient');
     }
-
+    public function category()
+    {
+        return $this->belongsTo('App\Models\Category');
+    }
     public function getIngredientNamesAttribute()
     {
         if ($this->ingredients->isNotEmpty()) {

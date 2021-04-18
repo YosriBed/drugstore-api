@@ -12,8 +12,8 @@ class HomeController extends Controller
     public function index()
     {
         try {
-            $drugs = Category::with(['drugs', 'drugs.ingredients'])->get();
-            return Utils::returnData($drugs);
+            $data = ['API' => "API SERVER IS RUNNING"];
+            return Utils::returnData($data);
         } catch (\Exception $e) {
             return Utils::handleException($e);
         }
