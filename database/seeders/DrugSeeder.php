@@ -17,11 +17,15 @@ class DrugSeeder extends Seeder
     {
         $behind = new Category();
         $behind->name = 'Behind the counter';
+        $behind->description = 'Over-the-counter drugs are medicines sold directly to a consumer without a requirement for a prescription from a healthcare professional, as opposed to prescription drugs, which may be supplied only to consumers possessing a valid prescription.';
+        $behind->picture = 'https://source.unsplash.com/random';
         $behind->save();
         $behind->refresh();
 
         $prescription = new Category();
         $prescription->name = 'Prescription Drugs';
+        $prescription->description = 'A prescription drug is a pharmaceutical drug that legally requires a medical prescription to be dispensed. In contrast, over-the-counter drugs can be obtained without a prescription.';
+        $prescription->picture = 'https://source.unsplash.com/random';
         $prescription->save();
         $prescription->refresh();
 
